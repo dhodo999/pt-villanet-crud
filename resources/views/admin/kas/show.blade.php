@@ -28,7 +28,7 @@
                         <button type="submit" class="btn btn-primary">Tambah Data Kas</button>
                     </div>
                     <div class="form-group mt-2">
-                        <a class="btn btn-primary" data-bs-toggle="collapse" href="{{url('/')}}" role="button" aria-expanded="false" aria-controls="collapseExample">Back</a>
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="{{url('/indexkas')}}" role="button" aria-expanded="false" aria-controls="collapseExample">Back</a>
                     </div>
                 </form>
             </div>

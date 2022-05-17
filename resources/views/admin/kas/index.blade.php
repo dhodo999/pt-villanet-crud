@@ -9,7 +9,7 @@
                     <div class="col-md-12">
                         <div class="overview-wrap">
                             <h2 class="title-1">Kas Kantor</h2>
-                            <a href="{{url('create')}}" class="btn btn-primary">Tambah Data</a>
+                            <a href="{{url('createkas')}}" class="btn btn-primary"><i class="fas fa-plus"></i>      Tambah Data</a> 
                             </button>
                         </div>
                     </div>
@@ -35,14 +35,14 @@
                                     <td>{{ $dataKas->pemasukan }}</td>
                                     <td>{{ $dataKas->pembayaran }}</td>
                                     <td>
-                                        <a href="{{url('/show/'.$dataKas->id)}}"><i class="far fa-edit" style="color:green"></i></a>
-                                        <a href="{{url('/destroy/'.$dataKas->id)}}"><i class="fas fa-trash-alt" style="color:red"></i></a>
-                                        
+                                        <a href="{{url('/showkas/'.$dataKas->id)}}"><i class="far fa-edit" style="color:green"></i></a>
+                                        <a href="{{url('/destroykas/'.$dataKas->id)}}"><i class="fas fa-trash-alt" style="color:red"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach
                                 </tbody>
                             </table>
+
                         </div>
                     </div>
                 </div>

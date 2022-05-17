@@ -23,11 +23,11 @@ Auth::routes();
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/index', [KasController::class, 'index'])->name('kaskantor.index');
-    Route::get('/create', [KasController::class, 'create'])->name('kaskantor.create');
-    Route::post('/store', [KasController::class, 'store'])->name('kaskantor.store');
-    Route::get('/{id}/show', [KasController::class, 'show'])->name('kaskantor.show');
-    Route::post('/{id}/update', [KasController::class, 'update'])->name('kaskantor.update');
-    Route::get('/{id}/destroy', [KasController::class, 'destroy'])->name('kaskantor.destroy');
+    Route::get('/indexkas', [KasController::class, 'indexkas'])->name('kaskantor.index');
+    Route::get('/createkas', [KasController::class, 'createkas'])->name('kaskantor.create');
+    Route::post('/storekas', [KasController::class, 'storekas'])->name('kaskantor.store');
+    Route::get('/showkas/{id}', [KasController::class, 'showkas'])->name('kaskantor.show');
+    Route::post('/updatekas/{id}', [KasController::class, 'updatekas'])->name('kaskantor.update');
+    Route::get('/destroykas/{id}', [KasController::class, 'destroykas'])->name('kaskantor.destroy');
 
 });

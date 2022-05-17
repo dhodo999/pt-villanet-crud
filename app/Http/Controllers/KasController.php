@@ -12,7 +12,7 @@ class KasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function indexkas()
     {
         $data = Kas::all();
         return view('admin/kas/index')->with([
@@ -25,7 +25,7 @@ class KasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function createkas()
     {
         return view('admin/kas/create');
     }
@@ -36,11 +36,11 @@ class KasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function storekas(Request $request)
     {
         $data = $request->except(['_token']);
         Kas::insert($data);
-        return redirect('/admin/home');
+        return redirect('admin/kas/index');
 
     }
 
@@ -50,7 +50,7 @@ class KasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showkas($id)
     {
         $data = Kas::findOrFail($id);
         return view('admin/kas/show')->with([
@@ -76,12 +76,12 @@ class KasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function updatekas(Request $request, $id)
     {
         $kas = Kas::findOrFail($id);
         $data = $request->except(['_token']);
         $kas->update($data);
-        return redirect('/admin/home');
+        return redirect('admin/kas/index');
     }
 
     /**
@@ -90,10 +90,10 @@ class KasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroykas($id)
     {
         $kas = Kas::findOrFail($id);
         $kas->delete();
-        return redirect('/admin/home');
+        return redirect('admin/kas/index');
     }
 }
