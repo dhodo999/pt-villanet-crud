@@ -20,6 +20,7 @@
                             <table class="table table-borderless table-data3">
                                 <thead>
                                     <tr>
+                                        <th>No</th>
                                         <th>Tanggal</th>
                                         <th>Saldo</th>
                                         <th>Pemasukan</th>
@@ -28,8 +29,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($data as $dataKas)
+                                    @foreach ($data as $p => $dataKas)
                                 <tr>
+                                    <td>{{ $p + 1 }}</td>
                                     <td>{{ $dataKas->tanggal }}</td>
                                     <td>{{ $dataKas->saldo }}</td>
                                     <td>{{ $dataKas->pemasukan }}</td>
@@ -42,7 +44,7 @@
                                 @endforeach
                                 </tbody>
                             </table>
-
+                            {{ $data->links() }}
                         </div>
                     </div>
                 </div>

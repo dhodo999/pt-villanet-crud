@@ -14,10 +14,8 @@ class KasController extends Controller
      */
     public function indexkas()
     {
-        $data = Kas::all();
-        return view('admin/kas/index')->with([
-            'data' => $data
-        ]);
+        $data = Kas::paginate(5);
+        return view('admin/kas/index', compact('data'));
     }
 
     /**
@@ -38,10 +36,10 @@ class KasController extends Controller
      */
     public function storekas(Request $request)
     {
-        $data = $request->except(['_token']);
-        Kas::insert($data);
-        return redirect('admin/kas/index');
+        $data = Kas::create($request->all());
+        $data->save();
 
+        return redirect()->route('kaskantor.index');
     }
 
     /**
@@ -53,9 +51,7 @@ class KasController extends Controller
     public function showkas($id)
     {
         $data = Kas::findOrFail($id);
-        return view('admin/kas/show')->with([
-            'data' => $data
-        ]);
+        return view('admin/kas/show', compact('data'));
     }
 
     /**
@@ -79,9 +75,10 @@ class KasController extends Controller
     public function updatekas(Request $request, $id)
     {
         $kas = Kas::findOrFail($id);
-        $data = $request->except(['_token']);
-        $kas->update($data);
-        return redirect('admin/kas/index');
+        $data->update($request->all());
+        $kas->save();
+
+        return redirect()->route('kaskantor.index');
     }
 
     /**
@@ -92,8 +89,9 @@ class KasController extends Controller
      */
     public function destroykas($id)
     {
-        $kas = Kas::findOrFail($id);
-        $kas->delete();
-        return redirect('admin/kas/index');
+        $data = Kas::findOrFail($id);
+        $data->delete();
+
+        return redirect()->route('kaskantor.index');
     }
 }

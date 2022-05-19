@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Create <b>Data</b></h1>
+                        <h1>Create Data</h1>
                         <div class="row">
                             <div class="col-lg-8">
                                 <form action="{{url('storekas')}}" method="post" enctype="multipart/form-data">

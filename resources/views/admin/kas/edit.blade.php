@@ -12,7 +12,7 @@
                                 <strong>Edit Form</strong> Contact Us
                             </div>
                             <div class="card-body card-block">
-                                <form action="{{ route('showkas', $dataKas->id)}}" method="post" class="">
+                                <form action="{{ url('//', $dataKas->id)}}" method="post" class="">
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                         <label for="nf-email" class=" form-control-label">Tanggal</label>
