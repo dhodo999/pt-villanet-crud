@@ -15,6 +15,10 @@ class CreateKaskantorTable extends Migration
     {
         Schema::create('kaskantor', function (Blueprint $table) {
             $table->id();
+            $table->string('tanggal');
+            $table->string('saldo');
+            $table->string('pemasukan');
+            $table->string('pembayaran');
             $table->timestamps();
         });
     }

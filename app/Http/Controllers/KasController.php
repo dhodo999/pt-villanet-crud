@@ -75,8 +75,8 @@ class KasController extends Controller
     public function updatekas(Request $request, $id)
     {
         $kas = Kas::findOrFail($id);
-        $data->update($request->all());
-        $kas->save();
+        $data = $request->except(['_token']);
+        $kas->update($data);
 
         return redirect()->route('kaskantor.index');
     }
