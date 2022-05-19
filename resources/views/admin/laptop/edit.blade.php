@@ -12,23 +12,23 @@
                                 <strong>Edit Form</strong> 
                             </div>
                             <div class="card-body card-block">
-                                <form action="{{ url('/showpengeluaran/', $dataPengeluaran->id)}}" method="post" class="">
+                                <form action="{{ url('/showlaptop/', $dataLaptop->id)}}" method="post" class="">
                                 {{ csrf_field() }}
                                 <div class="form-group">
-                                        <label for="nf-email" class=" form-control-label">Tanggal</label>
-                                        <input type="text" name="tanggal" class="form-control" value="{{ $dataPengeluaran->tanggal}}">
+                                        <label for="nf-email" class=" form-control-label">Nama</label>
+                                        <input type="text" name="nama" class="form-control" value="{{ $dataLaptop->nama}}">
                                     </div>
                                     <div class="form-group">
-                                        <label for="nf-email" class=" form-control-label">Deskripsi</label>
-                                        <input type="text" name="deskripsi" class="form-control" value="{{ $dataPengeluaran->deskripsi}}">
+                                        <label for="nf-email" class=" form-control-label">Tanggal Ambil</label>
+                                        <input type="text" name="tglambil" class="form-control" value="{{ $dataLaptop->tglambil}}">
                                     </div>
                                     <div class="form-group">
-                                        <label for="nf-password" class=" form-control-label">Pengeluaran</label>
-                                        <input type="text" name="pengeluaran" class="form-control" value="{{ $dataPengeluaran->pengeluaran}}">
+                                        <label for="nf-password" class=" form-control-label">Merk</label>
+                                        <input type="text" name="merk" class="form-control" value="{{ $dataLaptop->merk}}">
                                     </div>
                                     <div class="form-group">
-                                        <label for="nf-password" class=" form-control-label">Pembayaran</label>
-                                        <input type="text" name="pembayaran" class="form-control" value="{{ $dataPengeluaran->pembayaran}}">
+                                        <label for="nf-password" class=" form-control-label">Serial Number</label>
+                                        <input type="text" name="serialnumber" class="form-control" value="{{ $dataLaptop->serialnumber}}">
                                     </div>
                                     <div class="card-footer">
                                         <button type="submit" class="btn btn-primary btn-sm">

@@ -14,19 +14,19 @@
                                     @csrf
                                     <div class="form-group">
                                         <label for="tanggal">Nama</label>
-                                        <input type="text" name="nama" class="form-control" placeholder="nama">
+                                        <input type="text" name="nama" class="form-control" placeholder="Nama">
                                     </div>
                                     <div class="form-group">
                                         <label for="saldo">Alamat</label>
-                                        <input type="text" name="alamat" class="form-control" placeholder="alamat">
+                                        <input type="text" name="alamat" class="form-control" placeholder="Alamat">
                                     </div>
                                     <div class="form-group">
                                         <label for="pemasukan">No Telepon</label>
-                                        <input type="text" name="notlp" class="form-control" placeholder="notlp">
+                                        <input type="text" name="notlp" class="form-control" placeholder="Notlp">
                                     </div>
                                     <div class="form-group">
                                         <label for="pembayaran">Email</label>
-                                        <input type="text" name="email" class="form-control" placeholder="email">
+                                        <input type="text" name="email" class="form-control" placeholder="Email">
                                     </div>
                                     <div class="form-group mt-2">
                                         <button type="submit" class="btn btn-primary">Tambah Data Karyawan</button>

@@ -8,8 +8,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="overview-wrap">
-                            <h2 class="title-1">Pengeluaran Kantor</h2>
-                            <a href="{{url('createpengeluaran')}}" class="btn btn-primary"><i class="fas fa-plus"></i>      Tambah Data</a> 
+                            <h2 class="title-1">Karyawan Kantor</h2>
+                            <a href="{{url('createlaptop')}}" class="btn btn-primary"><i class="fas fa-plus"></i>      Tambah Data</a> 
                             </button>
                         </div>
                     </div>
@@ -21,24 +21,24 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Tanggal</th>
-                                        <th>Deskripsi</th>
-                                        <th>Pengeluaran</th>
-                                        <th>Pembayaran</th>
+                                        <th>Nama</th>
+                                        <th>Tanggal Ambil</th>
+                                        <th>Merk</th>
+                                        <th>Serial Number</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($data as $p => $dataPengeluaran)
+                                    @foreach ($data as $p => $dataLaptop)
                                 <tr>
                                     <td>{{ $p + 1 }}</td>
-                                    <td>{{ $dataPengeluaran->tanggal }}</td>
-                                    <td>{{ $dataPengeluaran->deskripsi }}</td>
-                                    <td>{{ $dataPengeluaran->pengeluaran }}</td>
-                                    <td>{{ $dataPengeluaran->pembayaran }}</td>
+                                    <td>{{ $dataLaptop->nama }}</td>
+                                    <td>{{ $dataLaptop->tglambil }}</td>
+                                    <td>{{ $dataLaptop->merk }}</td>
+                                    <td>{{ $dataLaptop->serialnumber }}</td>
                                     <td>
-                                        <a href="{{url('/showpengeluaran/'.$dataPengeluaran->id)}}"><i class="far fa-edit" style="color:green"></i></a>
-                                        <a href="{{url('/destroypengeluaran/'.$dataPengeluaran->id)}}"><i class="fas fa-trash-alt" style="color:red"></i></a>
+                                        <a href="{{url('/showlaptop/'.$dataLaptop->id)}}"><i class="far fa-edit" style="color:green"></i></a>
+                                        <a href="{{url('/destroylaptop/'.$dataLaptop->id)}}"><i class="fas fa-trash-alt" style="color:red"></i></a>
                                     </td>
                                 </tr>
                                 @endforeach

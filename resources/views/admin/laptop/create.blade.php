@@ -10,29 +10,29 @@
                         <h1>Create Data</h1>
                         <div class="row">
                             <div class="col-lg-8">
-                                <form action="{{url('storepengeluaran')}}" method="post" enctype="multipart/form-data">
+                                <form action="{{url('storelaptop')}}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">
-                                        <label for="tanggal">Tanggal</label>
-                                        <input type="text" name="tanggal" class="form-control" placeholder="Tanggal">
+                                        <label for="tanggal">Nama</label>
+                                        <input type="text" name="nama" class="form-control" placeholder="Nama">
                                     </div>
                                     <div class="form-group">
-                                        <label for="saldo">Deskripsi</label>
-                                        <input type="text" name="deskripsi" class="form-control" placeholder="Deskripsi">
+                                        <label for="saldo">Tanggal Ambil</label>
+                                        <input type="text" name="tglambil" class="form-control" placeholder="Tanggal Ambil">
                                     </div>
                                     <div class="form-group">
-                                        <label for="pemasukan">Pengeluaran</label>
-                                        <input type="text" name="pengeluaran" class="form-control" placeholder="Pengeluaran">
+                                        <label for="pemasukan">Merk</label>
+                                        <input type="text" name="merk" class="form-control" placeholder="Merk">
                                     </div>
                                     <div class="form-group">
-                                        <label for="pembayaran">Pembayaran</label>
-                                        <input type="text" name="pembayaran" class="form-control" placeholder="Pembayaran">
+                                        <label for="pembayaran">Serial Number</label>
+                                        <input type="text" name="serialnumber" class="form-control" placeholder="Serial Number">
                                     </div>
                                     <div class="form-group mt-2">
-                                        <button type="submit" class="btn btn-primary">Tambah Data Pengeluaran</button>
+                                        <button type="submit" class="btn btn-primary">Tambah Data Laptop</button>
                                     </div>
                                     <div class="form-group mt-2">
-                                        <a class="btn btn-primary" data-bs-toggle="collapse" href="{{url('/indexpengeluaran')}}" role="button" aria-expanded="false" aria-controls="collapseExample">Back</a>
+                                        <a class="btn btn-primary" data-bs-toggle="collapse" href="{{url('/indexlaptop')}}" role="button" aria-expanded="false" aria-controls="collapseExample">Back</a>
                                     </div>
                                 </form>
                             </div>

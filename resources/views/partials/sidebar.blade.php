@@ -16,7 +16,7 @@
                                 <i class="fas fa-chart-bar"></i>Data Kas</a>
                         </li>
                         <li>
-                            <a href="table.html">
+                            <a href="{{ route ('pengeluarankantor.index')}}">
                                 <i class="fas fa-table"></i>Data Pengeluaran</a>
                         </li>
                         <li>
@@ -24,7 +24,7 @@
                                 <i class="far fa-check-square"></i>Data Karyawan</a>
                         </li>
                         <li>
-                            <a href="calendar.html">
+                            <a href="{{ route ('laptopkantor.index')}}">
                                 <i class="fas fa-calendar-alt"></i>Data Laptop</a>
                         </li>
                     </ul>
