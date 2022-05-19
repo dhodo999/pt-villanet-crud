@@ -20,7 +20,7 @@
                                 <i class="fas fa-table"></i>Data Pengeluaran</a>
                         </li>
                         <li>
-                            <a href="form.html">
+                            <a href="{{ route ('karyawankantor.index')}}">
                                 <i class="far fa-check-square"></i>Data Karyawan</a>
                         </li>
                         <li>

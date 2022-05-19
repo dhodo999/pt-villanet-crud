@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KasController;
+use App\Http\Controllers\KaryawanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,5 +30,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/showkas/{id}', [KasController::class, 'showkas'])->name('kaskantor.show');
     Route::post('/updatekas/{id}', [KasController::class, 'updatekas'])->name('kaskantor.update');
     Route::get('/destroykas/{id}', [KasController::class, 'destroykas'])->name('kaskantor.destroy');
+
+    Route::get('/indexkaryawan', [KaryawanController::class, 'indexkaryawan'])->name('karyawankantor.index');
+    Route::get('/createkaryawan', [KaryawanController::class, 'createkaryawan'])->name('karyawankantor.create');
+    Route::post('/storekaryawan', [KaryawanController::class, 'storekaryawan'])->name('karyawankantor.store');
+    Route::get('/showkaryawan/{id}', [KaryawanController::class, 'showkaryawan'])->name('karyawankantor.show');
+    Route::post('/updatekaryawan/{id}', [KaryawanController::class, 'updatekaryawan'])->name('karyawankantor.update');
+    Route::get('/destroykaryawan/{id}', [KaryawanController::class, 'destroykaryawan'])->name('karyawankantor.destroy');
 
 });
