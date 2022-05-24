@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Dashboard</title>
+    <title>PT Villanet Banyukarta</title>
 
     @include('partials/css');
 </head>

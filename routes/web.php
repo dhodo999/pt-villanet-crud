@@ -53,6 +53,4 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/showlaptop/{id}', [LaptopController::class, 'showlaptop'])->name('laptopkantor.show');
     Route::post('/updatelaptop/{id}', [LaptopController::class, 'updatelaptop'])->name('laptopkantor.update');
     Route::get('/destroylaptop/{id}', [LaptopController::class, 'destroylaptop'])->name('laptopkantor.destroy');
-
-
 });

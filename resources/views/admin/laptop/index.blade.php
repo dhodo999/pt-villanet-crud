@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="overview-wrap">
-                            <h2 class="title-1">Karyawan Kantor</h2>
+                            <h2 class="title-1">Data Laptop</h2>
                             <a href="{{url('createlaptop')}}" class="btn btn-primary"><i class="fas fa-plus"></i>      Tambah Data</a> 
                             </button>
                         </div>
