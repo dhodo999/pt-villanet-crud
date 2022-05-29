@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Sancho | Dashboard')
+@section('title', 'PT Villanet | Dashboard')
 @section('content')
 <section>
     <div class="main-content">
@@ -22,7 +22,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="pemasukan">No Telepon</label>
-                                        <input type="text" name="notlp" class="form-control" placeholder="Notlp">
+                                        <input type="text" name="notlp" class="form-control" placeholder="No telepon">
                                     </div>
                                     <div class="form-group">
                                         <label for="pembayaran">Email</label>
