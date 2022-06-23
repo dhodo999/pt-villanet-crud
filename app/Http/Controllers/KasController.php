@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Kas;
+use App\Http\Requests\KasRequest;
 
 class KasController extends Controller
 {
@@ -34,7 +35,7 @@ class KasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function storekas(Request $request)
+    public function storekas(KasRequest $request)
     {
         $data = Kas::create($request->all());
         $data->save();
@@ -72,7 +73,7 @@ class KasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function updatekas(Request $request, $id)
+    public function updatekas(KasRequest $request, $id)
     {
         $kas = Kas::findOrFail($id);
         $data = $request->except(['_token']);

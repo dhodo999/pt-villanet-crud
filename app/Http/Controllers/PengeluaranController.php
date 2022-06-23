@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pengeluaran;
+use App\Http\Requests\PengeluaranRequest;
 
 class PengeluaranController extends Controller
 {
@@ -34,7 +35,7 @@ class PengeluaranController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function storepengeluaran(Request $request)
+    public function storepengeluaran(PengeluaranRequest $request)
     {
         $data = Pengeluaran::create($request->all());
         $data->save();
@@ -72,7 +73,7 @@ class PengeluaranController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function updatepengeluaran(Request $request, $id)
+    public function updatepengeluaran(PengeluaranRequest $request, $id)
     {
         $pengeluaran = Pengeluaran::findOrFail($id);
         $data = $request->except(['_token']);

@@ -14,19 +14,39 @@
                                     @csrf
                                     <div class="form-group">
                                         <label for="tanggal">Tanggal</label>
-                                        <input type="text" name="tanggal" class="form-control" placeholder="Tanggal">
+                                        <input type="text" name="tanggal" class="form-control @error('tanggal') is-invalid @enderror" placeholder="Tanggal" value="{{ old('tanggal') }}">
+                                        @error('tanggal')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="saldo">Deskripsi</label>
-                                        <input type="text" name="deskripsi" class="form-control" placeholder="Deskripsi">
+                                        <input type="text" name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror" placeholder="Deskripsi" value="{{ old('deskripsi') }}">
+                                        @error('deskripsi')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="pemasukan">Pengeluaran</label>
-                                        <input type="text" name="pengeluaran" class="form-control" placeholder="Pengeluaran">
+                                        <input type="text" name="pengeluaran" class="form-control @error('pengeluaran') is-invalid @enderror" placeholder="Pengeluaran" value="{{ old('pengeluaran') }}">
+                                        @error('pengeluaran')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="pembayaran">Pembayaran</label>
-                                        <input type="text" name="pembayaran" class="form-control" placeholder="Pembayaran">
+                                        <input type="text" name="pembayaran" class="form-control @error('pembayaran') is-invalid @enderror" placeholder="Pembayaran" value="{{ old('pembayaran') }}">
+                                        @error('pembayaran')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                     </div>
                                     <div class="form-group mt-2">
                                         <button type="submit" class="btn btn-primary">Tambah Data Pengeluaran</button>

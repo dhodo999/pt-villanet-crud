@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Karyawan;
+use App\Http\Requests\KaryawanRequest;
 
 class KaryawanController extends Controller
 {
@@ -34,7 +35,7 @@ class KaryawanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function storekaryawan(Request $request)
+    public function storekaryawan(KaryawanRequest $request)
     {
         $data = Karyawan::create($request->all());
         $data->save();
@@ -72,7 +73,7 @@ class KaryawanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function updatekaryawan(Request $request, $id)
+    public function updatekaryawan(KaryawanRequest $request, $id)
     {
         $karyawan = Karyawan::findOrFail($id);
         $data = $request->except(['_token']);

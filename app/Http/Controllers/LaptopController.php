@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Laptop;
+use App\Http\Requests\LaptopRequest;
 
 class LaptopController extends Controller
 {
@@ -34,7 +35,7 @@ class LaptopController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function storelaptop(Request $request)
+    public function storelaptop(LaptopRequest $request)
     {
         $data = Laptop::create($request->all());
         $data->save();
@@ -72,7 +73,7 @@ class LaptopController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function updatelaptop(Request $request, $id)
+    public function updatelaptop(LaptopRequest $request, $id)
     {
         $laptop = Laptop::findOrFail($id);
         $data = $request->except(['_token']);
