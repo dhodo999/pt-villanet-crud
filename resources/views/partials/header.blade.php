@@ -19,7 +19,7 @@
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="#">
-                                                        <img src="{{asset('admin/images/icon/image.jpg')}}" alt="{{ Auth::user()->name }}e" />
+                                                        <img src="{{asset('admin/images/icon/image.jpg')}}" alt="{{ Auth::user()->name }}" />
                                                     </a>
                                                 </div>
                                                 <div class="content">
@@ -37,7 +37,6 @@
                                                                 document.getElementById('logout-form').submit();">
                                                     {{ __('Logout') }}
                                             </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>

@@ -26,6 +26,7 @@ Auth::routes();
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    
     Route::get('/indexkas', [KasController::class, 'indexkas'])->name('kaskantor.index');
     Route::get('/createkas', [KasController::class, 'createkas'])->name('kaskantor.create');
     Route::post('/storekas', [KasController::class, 'storekas'])->name('kaskantor.store');

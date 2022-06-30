@@ -14,7 +14,7 @@
                                     @csrf
                                     <div class="form-group">
                                         <label for="tanggal">Tanggal</label>
-                                        <input type="text" name="tanggal" class="form-control @error('tanggal') is-invalid @enderror" placeholder="D/m/Y" value="{{ old('tanggal') }}">
+                                        <input type="date" name="tanggal" class="form-control @error('tanggal') is-invalid @enderror" placeholder="D/m/Y" value="{{ old('tanggal') }}">
                                         @error('tanggal')
                                     <div class="invalid-feedback">
                                         {{ $message }}

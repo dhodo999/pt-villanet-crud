@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('title', 'Sancho | Data Contacts')
 @section('content')
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
 <section>
     <div class="main-content">
         <div class="section__content section__content--p30">
@@ -37,8 +39,29 @@
                                     <td>{{ $dataKaryawan->notlp }}</td>
                                     <td>{{ $dataKaryawan->email }}</td>
                                     <td>
-                                        <a href="{{url('/showkaryawan/'.$dataKaryawan->id)}}"><i class="far fa-edit" style="color:green"></i></a>
-                                        <a href="{{url('/destroykaryawan/'.$dataKaryawan->id)}}"><i class="fas fa-trash-alt" style="color:red"></i></a>
+                                        <a href="{{url('/showkaryawan/'.$dataKaryawan->id)}}" class="btn btn-info">Edit</a>
+                                        <a href="#" class="btn btn-danger delete" data-id="{{$dataKaryawan->id}}">Delete</a>
+                                        <script>
+                                            $('.delete').click(function(){
+                                                swal({
+                                                    title: "Apakah data ini ingin dihapus ?",
+                                                    text: "Setelah dihapus data ini tidak bisa dikembalikan !",
+                                                    icon: "warning",
+                                                    buttons: true,
+                                                    dangerMode: true,
+                                                    })
+                                                    .then((willDelete) => {
+                                                    if (willDelete) {
+                                                        window.location = "{{url('/destroykaryawan/'.$dataKaryawan->id)}}"
+                                                        swal("Data ini berhasil dihapus !", {
+                                                        icon: "success",
+                                                        });
+                                                    } else {
+                                                        swal("Data ini tidak jadi dihapus !");
+                                                    }
+                                                });
+                                            });
+                                        </script>
                                     </td>
                                 </tr>
                                 @endforeach

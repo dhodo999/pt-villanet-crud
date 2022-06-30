@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('title', 'Sancho | Data Contacts')
 @section('content')
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
 <section>
     <div class="main-content">
         <div class="section__content section__content--p30">
@@ -25,6 +27,8 @@
                                         <th>Saldo</th>
                                         <th>Pemasukan</th>
                                         <th>Pembayaran</th>
+                                        <th>Pengeluaran</th>
+                                        <th>Notes</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -36,9 +40,32 @@
                                     <td>{{ $dataKas->saldo }}</td>
                                     <td>{{ $dataKas->pemasukan }}</td>
                                     <td>{{ $dataKas->pembayaran }}</td>
+                                    <td></td>
+                                    <td></td>
                                     <td>
-                                        <a href="{{url('/showkas/'.$dataKas->id)}}"><i class="far fa-edit" style="color:green"></i></a>
-                                        <a href="{{url('/destroykas/'.$dataKas->id)}}"><i class="fas fa-trash-alt" style="color:red"></i></a>
+                                        <a href="{{url('/showkas/'.$dataKas->id)}}" class="btn btn-info">Edit</a>
+                                        <a href="#" class="btn btn-danger delete" data-id="{{$dataKas->id}}">Delete</a>
+                                        <script>
+                                            $('.delete').click(function(){
+                                                swal({
+                                                    title: "Apakah data ini ingin dihapus ?",
+                                                    text: "Setelah dihapus data ini tidak bisa dikembalikan !",
+                                                    icon: "warning",
+                                                    buttons: true,
+                                                    dangerMode: true,
+                                                    })
+                                                    .then((willDelete) => {
+                                                    if (willDelete) {
+                                                        window.location = "{{url('/destroykas/'.$dataKas->id)}}"
+                                                        swal("Data ini berhasil dihapus !", {
+                                                        icon: "success",
+                                                        });
+                                                    } else {
+                                                        swal("Data ini tidak jadi dihapus !");
+                                                    }
+                                                });
+                                            });
+                                        </script>
                                     </td>
                                 </tr>
                                 @endforeach

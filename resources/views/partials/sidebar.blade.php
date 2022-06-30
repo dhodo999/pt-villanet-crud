@@ -1,7 +1,7 @@
 <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="{{asset('admin/images//icon/logo1.png')}}" alt="Cool Admin" />
+                    <img src="{{asset('admin/images/icon/logo1.png')}}" alt="" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
@@ -25,7 +25,7 @@
                         </li>
                         <li>
                             <a href="{{ route ('laptopkantor.index')}}">
-                                <i class="fas fa-calendar-alt"></i>Data Laptop</a>
+                                <i class="fas fa-desktop"></i>Data Laptop</a>
                         </li>
                     </ul>
                 </nav>
