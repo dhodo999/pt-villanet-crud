@@ -32,6 +32,9 @@
                                             <div class="account-dropdown__body">
                                                 
                                             <div class="account-dropdown__footer">
+                                            <a class="dropdown-item" href="{{ route('register') }}"> 
+                                                    {{ __('Register') }} 
+                                            </a> 
                                             <a class="dropdown-item" href="{{ route('logout') }}"
                                                 onclick="event.preventDefault();
                                                                 document.getElementById('logout-form').submit();">

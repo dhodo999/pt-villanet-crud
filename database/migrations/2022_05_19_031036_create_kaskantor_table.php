@@ -19,6 +19,8 @@ class CreateKaskantorTable extends Migration
             $table->string('saldo');
             $table->string('pemasukan');
             $table->string('pembayaran');
+            $table->string('pengeluaran')->nullable();
+            $table->string('notes')->nullable();
             $table->timestamps();
         });
     }

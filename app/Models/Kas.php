@@ -15,6 +15,8 @@ class Kas extends Model
         'tanggal',
         'saldo',
         'pemasukan',
-        'pembayaran'
+        'pembayaran',
+        'pengeluaran',
+        'notes'
     ];
 }

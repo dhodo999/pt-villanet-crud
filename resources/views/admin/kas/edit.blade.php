@@ -14,21 +14,29 @@
                             <div class="card-body card-block">
                                 <form action="{{ url('/showkas/', $dataKas->id)}}" method="post" class="">
                                 {{ csrf_field() }}
-                                <div class="form-group">
+                                    <div class="form-group">
                                         <label for="nf-email" class=" form-control-label">Tanggal</label>
-                                        <input type="text" name="tanggal" class="form-control" value="{{ $dataKas->tanggal}}">
+                                        <input type="text" name="tanggal" class="form-control" value="{{ $dataKas->tanggal }}">
                                     </div>
                                     <div class="form-group">
                                         <label for="nf-email" class=" form-control-label">Saldo</label>
-                                        <input type="text" name="saldo" class="form-control" value="{{ $dataKas->saldo}}">
+                                        <input type="text" name="saldo" class="form-control" value="{{ $dataKas->saldo }}">
                                     </div>
                                     <div class="form-group">
-                                        <label for="nf-password" class=" form-control-label">Pemasukan</label>
-                                        <textarea name="text" class="form-control">{{ $dataKas->pemasukan}}</textarea>
+                                        <label for="nf-email" class=" form-control-label">Pemasukan</label>
+                                        <input type="text" name="pemasukan" class="form-control" value="{{ $dataKas->pemasukan }}">
                                     </div>
                                     <div class="form-group">
-                                        <label for="nf-password" class=" form-control-label">Pembayaran</label>
-                                        <textarea name="text" class="form-control">{{ $dataKas->pembayaran}}</textarea>
+                                        <label for="nf-email" class=" form-control-label">Pembayaran</label>
+                                        <input type="text" name="pembayaran" class="form-control" value="{{ $dataKas->pembayaran }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nf-email" class=" form-control-label">Pengeluaran</label>
+                                        <input type="text" name="pengeluaran" class="form-control" value="{{ $dataKas->pengeluaran }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nf-email" class=" form-control-label">Notes</label>
+                                        <input type="text" name="notes" class="form-control" value="{{ $dataKas->notes }}">
                                     </div>
                                     <div class="card-footer">
                                         <button type="submit" class="btn btn-primary btn-sm">

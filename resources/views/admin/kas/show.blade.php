@@ -14,7 +14,7 @@
                                     @csrf
                                     <div class="form-group">
                                         <label for="tanggal">Tanggal</label>
-                                        <input type="text" name="tanggal" class="form-control" placeholder="D/m/Y" value="{{$data->tanggal}}">
+                                        <input type="date" name="tanggal" class="form-control" placeholder="D/m/Y" value="{{ $data->tanggal }}">
                                     </div>
                                     <div class="form-group">
                                         <label for="saldo">Saldo</label>
@@ -22,11 +22,23 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="pemasukan">Pemasukan</label>
-                                        <input type="text" name="pemasukan" class="form-control" placeholder="Pemasukan Kas" value="{{ $data->pemasukan }}"
+                                        <input type="text" name="pemasukan" class="form-control" placeholder="Pemasukan Kas" value="{{ $data->pemasukan }}">
                                     </div>
                                     <div class="form-group">
                                         <label for="pembayaran">Pembayaran</label>
-                                        <input type="text" name="pembayaran" class="form-control" placeholder="Metode Pembayaran" value="{{ $data->pembayaran}}"
+                                        <select name="pembayaran" class="form-control" placeholder="Metode Pembayaran" value="{{ $data->pembayaran }}">
+                                            <option selected>{{ $data->pembayaran }}</option>
+                                            <option value="Cash">Cash</option>
+                                            <option value="Transfer">Transfer</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pengeluaran">Pengeluaran</label>
+                                        <input type="text" name="pengeluaran" class="form-control" placeholder="Pengeluaran Kas" value="{{ $data->pengeluaran }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="notes">Notes</label>
+                                        <textarea name="notes" class="form-control">{{ $data->notes }}</textarea>
                                     </div>
                                     <div class="form-group mt-2">
                                         <button type="submit" class="btn btn-primary">Edit Data Kas</button>

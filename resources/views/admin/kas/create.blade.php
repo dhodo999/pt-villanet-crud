@@ -41,8 +41,29 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="pembayaran">Pembayaran</label>
-                                        <input type="text" name="pembayaran" class="form-control @error('pembayaran') is-invalid @enderror" placeholder="Metode Pembayaran" value="{{ old('pembayaran') }}">
+                                        <select name="pembayaran" class="form-control @error('pembayaran') is-invalid @enderror" placeholder="Metode Pembayaran" value="{{ old('pembayaran') }}">
+                                            <option value="Cash">Cash</option>
+                                            <option value="Transfer">Transfer</option>
+                                        </select>
                                         @error('pembayaran')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pembayaran">Pengeluaran</label>
+                                        <input type="text" name="pengeluaran" class="form-control @error('pengeluaran') is-invalid @enderror" placeholder="Pengeluaran Kas" value="{{ old('pengeluaran') }}">
+                                        @error('pengeluaran')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pembayaran">Notes</label>
+                                        <textarea name="notes" class="form-control @error('notes') is-invalid @enderror" value="{{ old('notes') }}" rows="3"></textarea>
+                                        @error('notes')
                                     <div class="invalid-feedback">
                                         {{ $message }}
                                     </div>

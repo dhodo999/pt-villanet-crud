@@ -11,13 +11,13 @@
                     <div class="col-md-12">
                         <div class="overview-wrap">
                             <h2 class="title-1">Kas Kantor</h2>
-                            <a href="{{url('createkas')}}" class="btn btn-primary"><i class="fas fa-plus"></i>      Tambah Data</a> 
+                            <a href="{{url('createkas')}}" class="btn btn-primary"><i class="fas fa-plus"></i>Tambah Data</a> 
                             </button>
                         </div>
                     </div>
                 </div>
                 <div class="row m-t-30">
-                    <div class="col-md-12">
+                    <div class="col-md-16" style="width: 2800px">
                         <div class="table-responsive m-b-40">
                             <table class="table table-borderless table-data3">
                                 <thead>
@@ -40,8 +40,8 @@
                                     <td>{{ $dataKas->saldo }}</td>
                                     <td>{{ $dataKas->pemasukan }}</td>
                                     <td>{{ $dataKas->pembayaran }}</td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>{{ $dataKas->pengeluaran }}</td>
+                                    <td>{{ $dataKas->notes }}</td>
                                     <td>
                                         <a href="{{url('/showkas/'.$dataKas->id)}}" class="btn btn-info">Edit</a>
                                         <a href="#" class="btn btn-danger delete" data-id="{{$dataKas->id}}">Delete</a>

@@ -16,10 +16,6 @@
                                 <i class="fas fa-chart-bar"></i>Data Kas</a>
                         </li>
                         <li>
-                            <a href="{{ route ('pengeluarankantor.index')}}">
-                                <i class="fas fa-table"></i>Data Pengeluaran</a>
-                        </li>
-                        <li>
                             <a href="{{ route ('karyawankantor.index')}}">
                                 <i class="far fa-check-square"></i>Data Karyawan</a>
                         </li>
