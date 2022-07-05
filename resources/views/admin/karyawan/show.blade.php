@@ -22,11 +22,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="pemasukan">No Telepon</label>
-                                        <input type="text" name="notlp" class="form-control" placeholder="notlp" value="{{ $data->notlp }}"
+                                        <input type="text" name="notlp" class="form-control" placeholder="notlp" value="{{ $data->notlp }}">
                                     </div>
                                     <div class="form-group">
                                         <label for="pembayaran">Email</label>
-                                        <input type="text" name="email" class="form-control" placeholder="email" value="{{ $data->email}}"
+                                        <input type="text" name="email" class="form-control" placeholder="email" value="{{ $data->email}}">
                                     </div>
                                     <div class="form-group mt-2">
                                         <button type="submit" class="btn btn-primary">Edit Data Karyawan</button>

@@ -1,6 +1,6 @@
 <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
-                <a href="#">
+                <a href="/home">
                     <img src="{{asset('admin/images/icon/logo1.png')}}" alt="" />
                 </a>
             </div>
@@ -12,16 +12,16 @@
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="{{ route ('kaskantor.index')}}">
-                                <i class="fas fa-chart-bar"></i>Data Kas</a>
-                        </li>
-                        <li>
                             <a href="{{ route ('karyawankantor.index')}}">
-                                <i class="far fa-check-square"></i>Data Karyawan</a>
+                                <i class="far fa-circle"></i>Data Karyawan</a>
                         </li>
                         <li>
                             <a href="{{ route ('laptopkantor.index')}}">
                                 <i class="fas fa-desktop"></i>Data Laptop</a>
+                        </li>
+                        <li>
+                            <a href="{{ route ('kaskantor.index')}}">
+                                <i class="fas fa-chart-bar"></i>Data Kas</a>
                         </li>
                     </ul>
                 </nav>

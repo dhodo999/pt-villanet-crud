@@ -22,11 +22,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="pemasukan">Merk</label>
-                                        <input type="text" name="merk" class="form-control" placeholder="Merk" value="{{ $data->merk }}"
+                                        <input type="text" name="merk" class="form-control" placeholder="Merk" value="{{ $data->merk }}">
                                     </div>
                                     <div class="form-group">
                                         <label for="pembayaran">Serial Number</label>
-                                        <input type="text" name="serialnumber" class="form-control" placeholder="Serial Number" value="{{ $data->serialnumber}}"
+                                        <input type="text" name="serialnumber" class="form-control" placeholder="Serial Number" value="{{ $data->serialnumber}}">
                                     </div>
                                     <div class="form-group mt-2">
                                         <button type="submit" class="btn btn-primary">Edit Data Laptop</button>
