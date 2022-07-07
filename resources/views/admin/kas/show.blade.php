@@ -17,10 +17,6 @@
                                         <input type="date" name="tanggal" class="form-control" placeholder="D/m/Y" value="{{ $data->tanggal }}">
                                     </div>
                                     <div class="form-group">
-                                        <label for="saldo">Saldo</label>
-                                        <input type="text" name="saldo" class="form-control" placeholder="Saldo Kas" value="{{ $data->saldo }}">
-                                    </div>
-                                    <div class="form-group">
                                         <label for="pemasukan">Pemasukan</label>
                                         <input type="text" name="pemasukan" class="form-control" placeholder="Pemasukan Kas" value="{{ $data->pemasukan }}">
                                     </div>
@@ -35,6 +31,10 @@
                                     <div class="form-group">
                                         <label for="pengeluaran">Pengeluaran</label>
                                         <input type="text" name="pengeluaran" class="form-control" placeholder="Pengeluaran Kas" value="{{ $data->pengeluaran }}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="saldo">Total Saldo</label>
+                                        <input type="text" name="saldo" class="form-control" placeholder="Saldo Kas" value="{{ $data->saldo }}">
                                     </div>
                                     <div class="form-group">
                                         <label for="notes">Notes</label>

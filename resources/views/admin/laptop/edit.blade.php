@@ -20,7 +20,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="nf-email" class=" form-control-label">Tanggal Ambil</label>
-                                        <input type="text" name="tglambil" class="form-control" value="{{ $dataLaptop->tglambil}}">
+                                        <input type="date" name="tglambil" class="form-control" value="{{ $dataLaptop->tglambil}}">
                                     </div>
                                     <div class="form-group">
                                         <label for="nf-password" class=" form-control-label">Merk</label>

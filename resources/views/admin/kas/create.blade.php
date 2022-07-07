@@ -22,22 +22,13 @@
                                     @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label for="saldo">Saldo</label>
-                                        <input type="text" name="saldo" class="form-control @error('saldo') is-invalid @enderror" placeholder="Saldo Kas" value="{{ old('saldo') }}"> 
-                                        @error('saldo')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                    @enderror
-                                    </div>
-                                    <div class="form-group">
                                         <label for="pemasukan">Pemasukan</label>
                                         <input type="text" name="pemasukan" class="form-control @error('pemasukan') is-invalid @enderror" placeholder="Pemasukan Kas" value="{{ old('pemasukan') }}">
                                         @error('pemasukan')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                    @enderror
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="pembayaran">Pembayaran</label>
@@ -46,15 +37,24 @@
                                             <option value="Transfer">Transfer</option>
                                         </select>
                                         @error('pembayaran')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                    @enderror
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="pembayaran">Pengeluaran</label>
                                         <input type="text" name="pengeluaran" class="form-control @error('pengeluaran') is-invalid @enderror" placeholder="Pengeluaran Kas" value="{{ old('pengeluaran') }}">
                                         @error('pengeluaran')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="saldo">Total Saldo</label>
+                                        <input type="text" name="saldo" class="form-control @error('saldo') is-invalid @enderror" placeholder="Saldo Kas" value="{{ old('saldo') }}"> 
+                                        @error('saldo')
                                     <div class="invalid-feedback">
                                         {{ $message }}
                                     </div>

@@ -24,10 +24,10 @@ class KaryawanRequest extends FormRequest
     public function rules()
     {
         return [
-            'nama'=>'required',
-            'alamat'=>'required',
-            'notlp'=>'required|max:15',
-            'email'=>'required'
+            'nama'=>['required'],
+            'alamat'=>['required'],
+            'notlp'=>['required', 'max:15'],
+            'email'=>['required',]
         ];
     }
 }

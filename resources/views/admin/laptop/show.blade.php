@@ -18,7 +18,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="saldo">Tanggal Ambil</label>
-                                        <input type="text" name="tglambil" class="form-control" placeholder="Tanggal Ambil" value="{{ $data->tglambil}}">
+                                        <input type="date" name="tglambil" class="form-control" placeholder="Tanggal Ambil" value="{{ $data->tglambil}}">
                                     </div>
                                     <div class="form-group">
                                         <label for="pemasukan">Merk</label>

@@ -23,7 +23,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="saldo">Tanggal Ambil</label>
-                                        <input type="text" name="tglambil" class="form-control @error('tglambil') is-invalid @enderror" placeholder="Tanggal Ambil" value="{{ old('tglambil') }}">
+                                        <input type="date" name="tglambil" class="form-control @error('tglambil') is-invalid @enderror" placeholder="Tanggal Ambil" value="{{ old('tglambil') }}">
                                         @error('tglambil')
                                     <div class="invalid-feedback">
                                         {{ $message }}
