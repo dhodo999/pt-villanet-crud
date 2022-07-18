@@ -24,10 +24,11 @@ class KasRequest extends FormRequest
     public function rules()
     {
         return [
-            'tanggal'=>'required',
-            'saldo'=>'required',
-            'pemasukan'=>'required',
-            'pembayaran'=>'required'
+            'tanggal'=>['required'],
+            'saldo'=>['required', 'integer'],
+            'pemasukan'=>['required', 'integer'],
+            'pembayaran'=>['required'],
+            'pengeluaran'=>['integer']
         ];
     }
 }

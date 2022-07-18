@@ -37,10 +37,10 @@
                                 <tr>
                                     <td>{{ $p + 1 }}</td>
                                     <td>{{ $dataKas->tanggal }}</td>
-                                    <td>Rp. {{ $dataKas->saldo }}</td>
-                                    <td>Rp. {{ $dataKas->pemasukan }}</td>
+                                    <td>Rp{{ $dataKas->saldo }}</td>
+                                    <td>Rp{{ $dataKas->pemasukan }}</td>
                                     <td>{{ $dataKas->pembayaran }}</td>
-                                    <td>Rp. {{ $dataKas->pengeluaran }}</td>
+                                    <td>Rp{{ $dataKas->pengeluaran }}</td>
                                     <td>{{ $dataKas->notes }}</td>
                                     <td>
                                         <a href="{{url('/showkas/'.$dataKas->id)}}" class="btn btn-info">Edit</a>
